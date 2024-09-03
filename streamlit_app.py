@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Ocultar el menú principal y otros elementos
+# Ocultar el menú principal, botones superiores y otros elementos
 st.markdown("""
     <style>
         .reportview-container {
@@ -10,6 +10,8 @@ st.markdown("""
         .stDeployButton {display:none;}
         footer {visibility: hidden;}
         #stDecoration {display:none;}
+        header {visibility: hidden;}
+        [data-testid="stToolbar"] {visibility: hidden !important;}
     </style>
 """, unsafe_allow_html=True)
 
@@ -17,7 +19,7 @@ st.markdown("""
 st.title("Mi Aplicación Streamlit")
 
 # Agregar algún contenido de ejemplo
-st.write("Bienvenido a mi aplicación Streamlit con el menú principal oculto.")
+st.write("Bienvenido a mi aplicación Streamlit con el menú principal y botones superiores ocultos.")
 
 # Agregar un widget de ejemplo
 nombre = st.text_input("Ingresa tu nombre")
